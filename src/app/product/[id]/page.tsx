@@ -7,21 +7,17 @@ export default function ProductId({
 }) {
   return (
     <div>
-      <Link href={"/product"}>{id}</Link>
+      <Link id="show" style={{
+        display: "block",
+      }} href={"/product"}>{id}</Link>
       {Array.from({ length: 10 }).map((_, i) => (
         <Link
+        id={`show${i}`}
           style={{
             display: "block",
-            marginBottom: "10px",
+            marginBottom: "100vh",
           }}
           href={`/product/${id}/review/${i + 1}`}
-          // href={{
-          //   pathname: "/product/[id]/review/[reviewId]",
-          //   query: {
-          //     id,
-          //     reviewId: String(i + 1),
-          //   },
-          // }}
         >
           第{i + 1}条评论
         </Link>

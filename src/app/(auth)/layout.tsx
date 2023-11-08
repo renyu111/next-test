@@ -14,11 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <h1 style={{ margin: "100px" }}>auth</h1>
-        {children}
-      </body>
-    </html>
+    <div>
+      <h1
+        style={{
+          margin: "100px",
+          width: "100px",
+          height: "100px",
+          backgroundColor: "red",
+        }}
+      >
+        auth
+      </h1>
+      {children}
+    </div>
   );
 }
